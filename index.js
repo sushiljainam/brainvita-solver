@@ -18,6 +18,7 @@ function attemptAllSolutions() {
         }
     }
     printBoard(gameMatrix);
+    findNextPossibleMoves(gameMatrix);
 }
 
 function fillNode(i, j) {
@@ -49,6 +50,41 @@ function printBoard(mat) {
             }
         }
         console.log(str);
+    }
+}
+
+function findNextPossibleMoves(mat) {
+    let currentBlanks = [];
+    for (let i = 0; i < mat.length; i++) {
+        const row = mat[i];
+        for (let j = 0; j < row.length; j++) {
+            const n = row[j];
+            if (n === EMPTY_NODE) {
+                currentBlanks.push({ x: i, y: j });
+            }
+        }
+    }
+    for (let c = 0; c < currentBlanks.length; c++) {
+        const blank = currentBlanks[c];
+        let allTwoStepsFar = [];
+        allTwoStepsFar.push({ x: blank.x + 2, y: blank.y });
+        allTwoStepsFar.push({ x: blank.x, y: blank.y + 2 });
+        allTwoStepsFar.push({ x: blank.x - 2, y: blank.y });
+        allTwoStepsFar.push({ x: blank.x, y: blank.y - 2 });
+        for (let i = 0; i < allTwoStepsFar.length; i++) {
+            let posMov = allTwoStepsFar[i]
+            // posMov Valid and filled
+            if (
+                posMov.x >= boardSize || posMov.y >= boardSize ||
+                posMov.x < 0 || posMov.y < 0
+            ) {
+                // out of array
+                continue;
+            }
+            if (mat[posMov.x][posMov.y] === FILLED_NODE) {
+                // find if middle is filled too
+            }
+        }
     }
 }
 
