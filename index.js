@@ -8,6 +8,7 @@ const VOID_BEYOND_N_OF_CENTER = 2; // to form plus shape of width 3
 const EMPTY_NODE = 'empty';
 const VOID_NODE = 'void';
 const FILLED_NODE = 'filled';
+const TILL_BLANKS = 3
 
 function attemptAllSolutions() {
     let discardedCount = 0;
@@ -145,7 +146,7 @@ function getAllPaths(mat) {
             }
         }
     }
-    if (currentBlanksCounter >= 2) {
+    if (currentBlanksCounter >= TILL_BLANKS) {
         return;
     }
     for (let i = 0; i < 1; i++) {
