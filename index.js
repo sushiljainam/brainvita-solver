@@ -1,3 +1,4 @@
+const { clone } = require("ramda");
 
 
 const boardSize = 7;
@@ -18,8 +19,19 @@ function attemptAllSolutions() {
         }
     }
     printBoard(gameMatrix);
-    let nextMoves = findNextPossibleMoves(gameMatrix);
+    let nextMoves, board1;
+    nextMoves = findNextPossibleMoves(gameMatrix);
     console.log('nextMoves:', nextMoves);
+    board1 = applyMove(gameMatrix, nextMoves[0]);
+    printBoard(board1)
+    // nextMoves = findNextPossibleMoves(board1);
+    // console.log('nextMoves:', nextMoves);
+    // board1 = applyMove(board1, nextMoves[0]);
+    // printBoard(board1)
+    // nextMoves = findNextPossibleMoves(board1);
+    // console.log('nextMoves:', nextMoves);
+    // board1 = applyMove(board1, nextMoves[0]);
+    // printBoard(board1)
 }
 
 function fillNode(i, j) {
@@ -114,6 +126,13 @@ function middleCellOfTwo(one, two) {
                 { x: two.x - 1, y: two.y } :
                 undefined
     }
+}
+function applyMove(mat, move) {
+    let newMat = clone(mat);
+    newMat[move.from.x][move.from.y] = EMPTY_NODE;
+    newMat[move.to.x][move.to.y] = FILLED_NODE;
+    newMat[move.discard.x][move.discard.y] = EMPTY_NODE;
+    return newMat;
 }
 attemptAllSolutions();
 
