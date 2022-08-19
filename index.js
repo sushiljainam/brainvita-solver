@@ -1,4 +1,4 @@
-const { clone } = require("ramda");
+const { clone, concat } = require("ramda");
 
 
 const boardSize = 7;
@@ -27,7 +27,8 @@ function attemptAllSolutions() {
     board1 = applyMove(gameMatrix, nextMoves[0]);
     printBoard(board1)
 
-    getAllPaths(board1);
+    let movesCounts = getAllPaths(board1);
+    console.log(movesCounts);
     // nextMoves = findNextPossibleMoves(board1);
     // console.log('nextMoves:', nextMoves);
     // board1 = applyMove(board1, nextMoves[0]);
@@ -137,6 +138,7 @@ function applyMove(mat, move) {
 }
 
 function getAllPaths(mat) {
+    let movesStepByStep = []
     let nextMoves;
     let currentBlanksCounter = 0;
     for (let i = 0; i < mat.length; i++) {
@@ -149,17 +151,20 @@ function getAllPaths(mat) {
         }
     }
     if (currentBlanksCounter >= TILL_BLANKS) {
-        return;
+        return movesStepByStep;
     }
     for (let i = 0; i < 1; i++) {
         nextMoves = findNextPossibleMoves(mat);
+        movesStepByStep.push(nextMoves.length);
         console.log('nextMoves:', nextMoves);
         for (let m = 0; m < nextMoves.length; m++) {
             var board2 = applyMove(mat, nextMoves[m]);
             printBoard(board2);
-            getAllPaths(board2);
+            let movesCountArray = getAllPaths(board2);
+            movesStepByStep = concat(movesStepByStep, movesCountArray);
         }
     }
+    return movesStepByStep;
 }
 attemptAllSolutions();
 
