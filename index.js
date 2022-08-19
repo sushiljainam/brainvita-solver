@@ -21,10 +21,10 @@ function attemptAllSolutions() {
     }
     printBoard(gameMatrix);
     let nextMoves, board1 = gameMatrix;
-    // nextMoves = findNextPossibleMoves(gameMatrix);
-    // console.log('nextMoves:', nextMoves);
-    // board1 = applyMove(gameMatrix, nextMoves[0]);
-    // printBoard(board1)
+    nextMoves = findNextPossibleMoves(gameMatrix);
+    console.log('nextMoves:', nextMoves);
+    board1 = applyMove(gameMatrix, nextMoves[0]);
+    printBoard(board1)
     getAllPaths(board1);
     // nextMoves = findNextPossibleMoves(board1);
     // console.log('nextMoves:', nextMoves);
