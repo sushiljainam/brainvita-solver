@@ -10,7 +10,8 @@ const VOID_NODE = 'void';
 const FILLED_NODE = 'filled';
 const TILL_BLANKS = 3
 const optimizeMoves = [
-    [0]
+    [0],
+    [0, 1],
 ]
 function attemptAllSolutions() {
     let discardedCount = 0;
