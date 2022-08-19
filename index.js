@@ -28,7 +28,7 @@ function fillNode(i, j) {
         }
     }
     // FILL ALL VOIDS
-    if (i <= Math.abs(CENTER.x - VOID_BEYOND_N_OF_CENTER) || j <= Math.abs(CENTER.y - VOID_BEYOND_N_OF_CENTER)) {
+    if (Math.abs(i - CENTER.x) >= VOID_BEYOND_N_OF_CENTER && Math.abs(j - CENTER.y) >= VOID_BEYOND_N_OF_CENTER) {
         return VOID_NODE;
     }
     return FILLED_NODE;
@@ -41,11 +41,11 @@ function printBoard(mat) {
         for (let j = 0; j < row.length; j++) {
             const node = row[j];
             if (node === VOID_NODE) {
-                str += '_ '
+                str += '_ ' //  + i + ','
             } else if (node === EMPTY_NODE) {
-                str += '0 '
+                str += '0 ' //  + i + ','
             } else if (node === FILLED_NODE) {
-                str += '1 '
+                str += '1 ' //  + i + ','
             }
         }
         console.log(str);
