@@ -24,14 +24,7 @@ function attemptAllSolutions() {
     // console.log('nextMoves:', nextMoves);
     // board1 = applyMove(gameMatrix, nextMoves[0]);
     // printBoard(board1)
-    for (let i = 0; i < 1; i++) {
-        nextMoves = findNextPossibleMoves(board1);
-        console.log('nextMoves:', nextMoves);
-        for (let m = 0; m < nextMoves.length; m++) {
-            var board2 = applyMove(board1, nextMoves[m]);
-            printBoard(board2)
-        }
-    }
+    getAllPaths(board1);
     // nextMoves = findNextPossibleMoves(board1);
     // console.log('nextMoves:', nextMoves);
     // board1 = applyMove(board1, nextMoves[0]);
@@ -138,6 +131,32 @@ function applyMove(mat, move) {
     newMat[move.to.x][move.to.y] = FILLED_NODE;
     newMat[move.discard.x][move.discard.y] = EMPTY_NODE;
     return newMat;
+}
+
+function getAllPaths(mat) {
+    let nextMoves;
+    let currentBlanksCounter = 0;
+    for (let i = 0; i < mat.length; i++) {
+        const row = mat[i];
+        for (let j = 0; j < row.length; j++) {
+            const n = row[j];
+            if (n === EMPTY_NODE) {
+                currentBlanksCounter++;
+            }
+        }
+    }
+    if (currentBlanksCounter >= 2) {
+        return;
+    }
+    for (let i = 0; i < 1; i++) {
+        nextMoves = findNextPossibleMoves(mat);
+        console.log('nextMoves:', nextMoves);
+        for (let m = 0; m < nextMoves.length; m++) {
+            var board2 = applyMove(mat, nextMoves[m]);
+            printBoard(board2);
+            getAllPaths(board2);
+        }
+    }
 }
 attemptAllSolutions();
 
