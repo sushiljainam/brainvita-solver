@@ -5,4 +5,8 @@
   "author": "Sushil Jain <13596814+sushiljainam@users.noreply.github.com>",
   "license": "UNLICENSE",
   "private": true
+  "private": true,
+  "dependencies": {
+    "ramda": "^0.28.0"
+  }
 }
