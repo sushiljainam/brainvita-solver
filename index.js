@@ -18,7 +18,8 @@ function attemptAllSolutions() {
         }
     }
     printBoard(gameMatrix);
-    findNextPossibleMoves(gameMatrix);
+    let nextMoves = findNextPossibleMoves(gameMatrix);
+    console.log('nextMoves:', nextMoves);
 }
 
 function fillNode(i, j) {
@@ -64,6 +65,7 @@ function findNextPossibleMoves(mat) {
             }
         }
     }
+    let allPossibleMoves = [];
     for (let c = 0; c < currentBlanks.length; c++) {
         const blank = currentBlanks[c];
         let allTwoStepsFar = [];
@@ -83,10 +85,35 @@ function findNextPossibleMoves(mat) {
             }
             if (mat[posMov.x][posMov.y] === FILLED_NODE) {
                 // find if middle is filled too
+                let middle = middleCellOfTwo(posMov, blank);
+                if (mat[middle.x][middle.y] === FILLED_NODE) {
+                    allPossibleMoves.push({ from: posMov, to: blank, middle });
+                } else {
+                    // far is filled BUT middle is empty
+                }
+            } else {
+                // VOID or EMPTY
+                continue;
             }
         }
     }
+    return allPossibleMoves;
 }
 
+function middleCellOfTwo(one, two) {
+    if (one.x === two.x) {
+        return (one.y === two.y + 2) ?
+            { x: two.x, y: two.y + 1 } :
+            (one.y === two.y - 2) ?
+                { x: two.x, y: two.y - 1 } :
+                undefined
+    } else if (one.y === two.y) {
+        return (one.x === two.x + 2) ?
+            { x: two.x + 1, y: two.y } :
+            (one.x === two.x - 2) ?
+                { x: two.x - 1, y: two.y } :
+                undefined
+    }
+}
 attemptAllSolutions();
 
