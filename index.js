@@ -41,7 +41,7 @@ function printBoard(mat) {
         for (let j = 0; j < row.length; j++) {
             const node = row[j];
             if (node === VOID_NODE) {
-                str += '_ ' //  + i + ','
+                str += '  ' //  + i + ','
             } else if (node === EMPTY_NODE) {
                 str += '0 ' //  + i + ','
             } else if (node === FILLED_NODE) {
