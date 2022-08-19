@@ -8,7 +8,7 @@ const VOID_BEYOND_N_OF_CENTER = 2; // to form plus shape of width 3
 const EMPTY_NODE = 'empty';
 const VOID_NODE = 'void';
 const FILLED_NODE = 'filled';
-const TILL_BLANKS = 2
+const TILL_BLANKS = 3
 const optimizeMoves = [
     [0]
 ]
@@ -159,7 +159,7 @@ function getAllPaths(mat, optimIndex) {
         nextMoves = findNextPossibleMoves(mat);
         movesStepByStep.push(nextMoves.length);
         console.log('nextMoves:', nextMoves);
-        for (let m = 0; (m < nextMoves.length && includes(m, optimizeMoves[optimIndex])); m++) {
+        for (let m = 0; (m < nextMoves.length && (optimizeMoves[optimIndex] ? includes(m, optimizeMoves[optimIndex]) : true)); m++) {
             var board2 = applyMove(mat, nextMoves[m]);
             printBoard(board2);
             let movesCountArray = getAllPaths(board2, optimIndex + 1);
