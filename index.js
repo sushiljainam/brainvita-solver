@@ -87,7 +87,7 @@ function findNextPossibleMoves(mat) {
                 // find if middle is filled too
                 let middle = middleCellOfTwo(posMov, blank);
                 if (mat[middle.x][middle.y] === FILLED_NODE) {
-                    allPossibleMoves.push({ from: posMov, to: blank, middle });
+                    allPossibleMoves.push({ from: posMov, to: blank, discard: middle });
                 } else {
                     // far is filled BUT middle is empty
                 }
