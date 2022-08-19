@@ -6,7 +6,7 @@
   "license": "UNLICENSE",
   "private": true,
   "scripts": {
-    "start": "node . >> output.txt"
+    "start": "node . > output.txt"
   },
   "dependencies": {
     "ramda": "^0.28.0"

@@ -28,7 +28,7 @@ function fillNode(i, j) {
         }
     }
     // FILL ALL VOIDS
-    if (i <= Math.abs(CENTER.x - VOID_BEYOND_N_OF_CENTER) && j <= Math.abs(CENTER.y - VOID_BEYOND_N_OF_CENTER)) {
+    if (i <= Math.abs(CENTER.x - VOID_BEYOND_N_OF_CENTER) || j <= Math.abs(CENTER.y - VOID_BEYOND_N_OF_CENTER)) {
         return VOID_NODE;
     }
     return FILLED_NODE;
