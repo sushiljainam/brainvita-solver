@@ -8,7 +8,7 @@ const VOID_BEYOND_N_OF_CENTER = 2; // to form plus shape of width 3
 const EMPTY_NODE = 'empty';
 const VOID_NODE = 'void';
 const FILLED_NODE = 'filled';
-const TILL_BLANKS = 30;
+const TILL_BLANKS = 40;
 const optimizeMoves = [
     [0],
     [0, 1],
@@ -22,7 +22,7 @@ function attemptAllSolutions() {
             gameMatrix[i].push(fillNode(i, j));
         }
     }
-    printBoard(gameMatrix);
+    // printBoard(gameMatrix);
 
     let nextMoves, board1 = gameMatrix;
     // nextMoves = findNextPossibleMoves(gameMatrix);
@@ -30,8 +30,10 @@ function attemptAllSolutions() {
     // board1 = applyMove(gameMatrix, nextMoves[0]);
     // printBoard(board1)
 
-    let movesCounts = getAllPaths(board1, 0);
+    let [movesCounts, lastBoard, movePicked] = getAllPaths(board1, 0, []);
     console.log(JSON.stringify(movesCounts));
+    console.log(JSON.stringify(movePicked));
+    printBoard(lastBoard, true);
     // nextMoves = findNextPossibleMoves(board1);
     // console.log('nextMoves:', nextMoves);
     // board1 = applyMove(board1, nextMoves[0]);
@@ -52,7 +54,7 @@ function fillNode(i, j) {
     return FILLED_NODE;
 }
 
-function printBoard(mat) {
+function printBoard(mat, result = false) {
     for (let i = 0; i < mat.length; i++) {
         const row = mat[i];
         let str = ''
@@ -69,6 +71,20 @@ function printBoard(mat) {
         console.log(str);
     }
     console.log('--------------');
+    if (!result) {
+        return;
+    }
+    let currentFilledCounter = 0;
+    for (let i = 0; i < mat.length; i++) {
+        const row = mat[i];
+        for (let j = 0; j < row.length; j++) {
+            const n = row[j];
+            if (n === FILLED_NODE) {
+                currentFilledCounter++;
+            }
+        }
+    }
+    console.log('Filled remaining', currentFilledCounter);
 }
 
 function findNextPossibleMoves(mat) {
@@ -140,8 +156,9 @@ function applyMove(mat, move) {
     return newMat;
 }
 
-function getAllPaths(mat, optimIndex) {
+function getAllPaths(mat, optimIndex, movePicked) {
     let movesStepByStep = []
+    let lastBoard = mat;
     let nextMoves;
     let currentBlanksCounter = 0;
     for (let i = 0; i < mat.length; i++) {
@@ -154,26 +171,28 @@ function getAllPaths(mat, optimIndex) {
         }
     }
     if (currentBlanksCounter >= TILL_BLANKS) {
-        return movesStepByStep;
+        return [movesStepByStep, lastBoard, movePicked];
     }
-    for (let i = 0; i < 1; i++) {
-        nextMoves = findNextPossibleMoves(mat);
-        movesStepByStep.push(nextMoves.length);
-        console.log('nextMoves:', nextMoves);
-        if (nextMoves.length <= 0) {
-            continue;
-        }
-        // (optimizeMoves[optimIndex] ? includes(m, optimizeMoves[optimIndex]) : true) // optimizer apply
-        let moveId = Math.floor(Math.random() * nextMoves.length);
-        console.log('moveId', moveId);
-        // for (let m = 0; m < nextMoves.length&& moveId === m ; m++) {
-        var board2 = applyMove(mat, nextMoves[moveId]);
-        printBoard(board2);
-        let movesCountArray = getAllPaths(board2, optimIndex + 1);
-        movesStepByStep = concat(movesStepByStep, movesCountArray);
-        // }
+    nextMoves = findNextPossibleMoves(mat);
+    movesStepByStep.push(nextMoves.length);
+    // console.log('nextMoves:', nextMoves);
+    if (nextMoves.length <= 0) {
+        console.log('MOVES possible: 0');
+        return [movesStepByStep, lastBoard, movePicked];
     }
-    return movesStepByStep;
+    // (optimizeMoves[optimIndex] ? includes(m, optimizeMoves[optimIndex]) : true) // optimizer apply
+    let moveId = Math.floor(Math.random() * nextMoves.length);
+    movePicked.push(moveId)
+    // console.log('moveId', moveId);
+    // for (let m = 0; m < nextMoves.length&& moveId === m ; m++) {
+    var board2 = applyMove(mat, nextMoves[moveId]);
+    // printBoard(board2);
+    let [movesCountArray, nextBoard, movePickedNew] = getAllPaths(board2, optimIndex + 1, movePicked);
+    lastBoard = nextBoard;
+    movePicked = movePickedNew;
+    movesStepByStep = concat(movesStepByStep, movesCountArray);
+    // }
+    return [movesStepByStep, lastBoard, movePicked];
 }
 attemptAllSolutions();
 
