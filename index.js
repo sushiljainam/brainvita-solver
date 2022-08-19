@@ -19,15 +19,19 @@ function attemptAllSolutions() {
         }
     }
     printBoard(gameMatrix);
-    let nextMoves, board1;
-    nextMoves = findNextPossibleMoves(gameMatrix);
-    console.log('nextMoves:', nextMoves);
-    board1 = applyMove(gameMatrix, nextMoves[0]);
-    printBoard(board1)
-    // nextMoves = findNextPossibleMoves(board1);
+    let nextMoves, board1 = gameMatrix;
+    // nextMoves = findNextPossibleMoves(gameMatrix);
     // console.log('nextMoves:', nextMoves);
-    // board1 = applyMove(board1, nextMoves[0]);
+    // board1 = applyMove(gameMatrix, nextMoves[0]);
     // printBoard(board1)
+    for (let i = 0; i < 1; i++) {
+        nextMoves = findNextPossibleMoves(board1);
+        console.log('nextMoves:', nextMoves);
+        for (let m = 0; m < nextMoves.length; m++) {
+            var board2 = applyMove(board1, nextMoves[m]);
+            printBoard(board2)
+        }
+    }
     // nextMoves = findNextPossibleMoves(board1);
     // console.log('nextMoves:', nextMoves);
     // board1 = applyMove(board1, nextMoves[0]);
@@ -64,6 +68,7 @@ function printBoard(mat) {
         }
         console.log(str);
     }
+    console.log('--------------');
 }
 
 function findNextPossibleMoves(mat) {
