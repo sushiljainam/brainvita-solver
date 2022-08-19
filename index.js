@@ -8,7 +8,7 @@ const VOID_BEYOND_N_OF_CENTER = 2; // to form plus shape of width 3
 const EMPTY_NODE = 'empty';
 const VOID_NODE = 'void';
 const FILLED_NODE = 'filled';
-const TILL_BLANKS = 3
+const TILL_BLANKS = 4
 
 function attemptAllSolutions() {
     let discardedCount = 0;
@@ -20,11 +20,13 @@ function attemptAllSolutions() {
         }
     }
     printBoard(gameMatrix);
+
     let nextMoves, board1 = gameMatrix;
     nextMoves = findNextPossibleMoves(gameMatrix);
     console.log('nextMoves:', nextMoves);
     board1 = applyMove(gameMatrix, nextMoves[0]);
     printBoard(board1)
+
     getAllPaths(board1);
     // nextMoves = findNextPossibleMoves(board1);
     // console.log('nextMoves:', nextMoves);
