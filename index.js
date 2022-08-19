@@ -1,4 +1,4 @@
-const { clone, concat } = require("ramda");
+const { clone, concat, includes } = require("ramda");
 
 
 const boardSize = 7;
@@ -8,8 +8,10 @@ const VOID_BEYOND_N_OF_CENTER = 2; // to form plus shape of width 3
 const EMPTY_NODE = 'empty';
 const VOID_NODE = 'void';
 const FILLED_NODE = 'filled';
-const TILL_BLANKS = 4
-
+const TILL_BLANKS = 2
+const optimizeMoves = [
+    [0]
+]
 function attemptAllSolutions() {
     let discardedCount = 0;
     let gameMatrix = [];
@@ -22,12 +24,12 @@ function attemptAllSolutions() {
     printBoard(gameMatrix);
 
     let nextMoves, board1 = gameMatrix;
-    nextMoves = findNextPossibleMoves(gameMatrix);
-    console.log('nextMoves:', nextMoves);
-    board1 = applyMove(gameMatrix, nextMoves[0]);
-    printBoard(board1)
+    // nextMoves = findNextPossibleMoves(gameMatrix);
+    // console.log('nextMoves:', nextMoves);
+    // board1 = applyMove(gameMatrix, nextMoves[0]);
+    // printBoard(board1)
 
-    let movesCounts = getAllPaths(board1);
+    let movesCounts = getAllPaths(board1, 0);
     console.log(movesCounts);
     // nextMoves = findNextPossibleMoves(board1);
     // console.log('nextMoves:', nextMoves);
@@ -137,7 +139,7 @@ function applyMove(mat, move) {
     return newMat;
 }
 
-function getAllPaths(mat) {
+function getAllPaths(mat, optimIndex) {
     let movesStepByStep = []
     let nextMoves;
     let currentBlanksCounter = 0;
@@ -157,10 +159,10 @@ function getAllPaths(mat) {
         nextMoves = findNextPossibleMoves(mat);
         movesStepByStep.push(nextMoves.length);
         console.log('nextMoves:', nextMoves);
-        for (let m = 0; m < nextMoves.length; m++) {
+        for (let m = 0; (m < nextMoves.length && includes(m, optimizeMoves[optimIndex])); m++) {
             var board2 = applyMove(mat, nextMoves[m]);
             printBoard(board2);
-            let movesCountArray = getAllPaths(board2);
+            let movesCountArray = getAllPaths(board2, optimIndex + 1);
             movesStepByStep = concat(movesStepByStep, movesCountArray);
         }
     }
