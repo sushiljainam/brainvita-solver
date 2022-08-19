@@ -1,4 +1,5 @@
 const { clone, concat, includes } = require("ramda");
+const { saveToDb } = require("./lib/saveToDb");
 
 
 const boardSize = 7;
@@ -33,7 +34,11 @@ function attemptAllSolutions() {
     let [movesCounts, lastBoard, movePicked] = getAllPaths(board1, 0, []);
     console.log(JSON.stringify(movesCounts));
     console.log(JSON.stringify(movePicked));
-    printBoard(lastBoard, true);
+    let remaining = printBoard(lastBoard, true);
+    saveToDb({
+        remaining,
+        movePicked,
+    });
     // nextMoves = findNextPossibleMoves(board1);
     // console.log('nextMoves:', nextMoves);
     // board1 = applyMove(board1, nextMoves[0]);
@@ -85,6 +90,7 @@ function printBoard(mat, result = false) {
         }
     }
     console.log('Filled remaining', currentFilledCounter);
+    return currentFilledCounter;
 }
 
 function findNextPossibleMoves(mat) {
