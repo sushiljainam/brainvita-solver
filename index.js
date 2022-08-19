@@ -8,7 +8,7 @@ const VOID_BEYOND_N_OF_CENTER = 2; // to form plus shape of width 3
 const EMPTY_NODE = 'empty';
 const VOID_NODE = 'void';
 const FILLED_NODE = 'filled';
-const TILL_BLANKS = 3
+const TILL_BLANKS = 4;
 const optimizeMoves = [
     [0],
     [0, 1],
@@ -31,7 +31,7 @@ function attemptAllSolutions() {
     // printBoard(board1)
 
     let movesCounts = getAllPaths(board1, 0);
-    console.log(movesCounts);
+    console.log(JSON.stringify(movesCounts));
     // nextMoves = findNextPossibleMoves(board1);
     // console.log('nextMoves:', nextMoves);
     // board1 = applyMove(board1, nextMoves[0]);
