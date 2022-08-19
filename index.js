@@ -8,7 +8,7 @@ const VOID_BEYOND_N_OF_CENTER = 2; // to form plus shape of width 3
 const EMPTY_NODE = 'empty';
 const VOID_NODE = 'void';
 const FILLED_NODE = 'filled';
-const TILL_BLANKS = 4;
+const TILL_BLANKS = 30;
 const optimizeMoves = [
     [0],
     [0, 1],
@@ -160,12 +160,18 @@ function getAllPaths(mat, optimIndex) {
         nextMoves = findNextPossibleMoves(mat);
         movesStepByStep.push(nextMoves.length);
         console.log('nextMoves:', nextMoves);
-        for (let m = 0; (m < nextMoves.length && (optimizeMoves[optimIndex] ? includes(m, optimizeMoves[optimIndex]) : true)); m++) {
-            var board2 = applyMove(mat, nextMoves[m]);
-            printBoard(board2);
-            let movesCountArray = getAllPaths(board2, optimIndex + 1);
-            movesStepByStep = concat(movesStepByStep, movesCountArray);
+        if (nextMoves.length <= 0) {
+            continue;
         }
+        // (optimizeMoves[optimIndex] ? includes(m, optimizeMoves[optimIndex]) : true) // optimizer apply
+        let moveId = Math.floor(Math.random() * nextMoves.length);
+        console.log('moveId', moveId);
+        // for (let m = 0; m < nextMoves.length&& moveId === m ; m++) {
+        var board2 = applyMove(mat, nextMoves[moveId]);
+        printBoard(board2);
+        let movesCountArray = getAllPaths(board2, optimIndex + 1);
+        movesStepByStep = concat(movesStepByStep, movesCountArray);
+        // }
     }
     return movesStepByStep;
 }
