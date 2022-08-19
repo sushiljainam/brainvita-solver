@@ -9,6 +9,7 @@
     "start": "node . > output.txt"
   },
   "dependencies": {
+    "mongodb": "^4.9.0",
     "ramda": "^0.28.0"
   }
 }
