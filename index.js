@@ -1,5 +1,5 @@
 const { clone, concat, includes } = require("ramda");
-const { saveToDb } = require("./lib/saveToDb");
+const { saveToDb, closeDb, getSaved } = require("./lib/saveToDb");
 
 
 const boardSize = 7;
@@ -14,7 +14,23 @@ const optimizeMoves = [
     [0],
     [0, 1],
 ]
-function attemptAllSolutions() {
+async function runSavedSolution() {
+    let gameMatrix = refillMatrix(boardSize);
+    getSaved({ remaining: 2 }).then((saved) => {
+        console.log('saved', saved);
+        if (!saved) {
+            closeDb();
+            return;
+        }
+        let [lastBoard, stepBoards] = runSpecificPath(gameMatrix, saved.movePicked);
+        for (let i = 0; i < stepBoards.length; i++) {
+            const stepBoard = stepBoards[i];
+            printBoard(stepBoard);
+        }
+        closeDb();
+    });
+}
+async function attemptAllSolutions() {
     let discardedCount = 0;
     let gameMatrix = [];
     for (let i = 0; i < boardSize; i++) {
@@ -30,15 +46,19 @@ function attemptAllSolutions() {
     // console.log('nextMoves:', nextMoves);
     // board1 = applyMove(gameMatrix, nextMoves[0]);
     // printBoard(board1)
-
-    let [movesCounts, lastBoard, movePicked] = getAllPaths(board1, 0, []);
-    console.log(JSON.stringify(movesCounts));
-    console.log(JSON.stringify(movePicked));
-    let remaining = printBoard(lastBoard, true);
-    saveToDb({
-        remaining,
-        movePicked,
-    });
+    for (let i = 0; i < 10_00_000; i++) {
+        let [movesCounts, lastBoard, movePicked] = getAllPaths(board1, 0, []);
+        console.log(JSON.stringify(movesCounts));
+        console.log(JSON.stringify(movePicked));
+        let remaining = printBoard(lastBoard, true);
+        if (remaining <= 2) {
+            await saveToDb({
+                remaining,
+                movePicked,
+            })
+        };
+    }
+    closeDb();
     // nextMoves = findNextPossibleMoves(board1);
     // console.log('nextMoves:', nextMoves);
     // board1 = applyMove(board1, nextMoves[0]);
@@ -58,7 +78,16 @@ function fillNode(i, j) {
     }
     return FILLED_NODE;
 }
-
+function refillMatrix(n) {
+    let gameMatrix = [];
+    for (let i = 0; i < n; i++) {
+        gameMatrix.push([]);
+        for (let j = 0; j < n; j++) {
+            gameMatrix[i].push(fillNode(i, j));
+        }
+    }
+    return gameMatrix;
+}
 function printBoard(mat, result = false) {
     for (let i = 0; i < mat.length; i++) {
         const row = mat[i];
@@ -200,5 +229,23 @@ function getAllPaths(mat, optimIndex, movePicked) {
     // }
     return [movesStepByStep, lastBoard, movePicked];
 }
-attemptAllSolutions();
-
+function runSpecificPath(mat, remainingMovesArray, stepBoards = []) {
+    let lastBoard = mat;
+    stepBoards.push(lastBoard);
+    let nextMoves = findNextPossibleMoves(mat);
+    console.log('nextMoves:', nextMoves);
+    if (nextMoves.length <= 0) {
+        console.log('MOVES possible: 0');
+        return [lastBoard, stepBoards];
+    }
+    let selectedMove = remainingMovesArray.shift();
+    console.log('MOVE selected:', selectedMove);
+    if (!(selectedMove >= 0)) {
+        return [lastBoard, stepBoards];
+    }
+    let stepBoard = applyMove(mat, nextMoves[selectedMove]);
+    runSpecificPath(stepBoard, remainingMovesArray, stepBoards);
+    return [lastBoard, stepBoards];
+}
+// attemptAllSolutions();
+runSavedSolution();

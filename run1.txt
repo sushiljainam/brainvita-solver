@@ -1,0 +1,532 @@
+saved {
+  _id: new ObjectId("62ff9bbcc166ce3f4741c9e9"),
+  remaining: 2,
+  movePicked: [
+    1, 1, 3, 2, 12, 1, 5, 2, 7,
+    3, 5, 2, 6,  5, 7, 5, 9, 5,
+    0, 3, 1, 0,  0, 1, 1, 0, 1,
+    0, 0, 1
+  ]
+}
+nextMoves: [
+  { from: { x: 5, y: 3 }, to: { x: 3, y: 3 }, discard: { x: 4, y: 3 } },
+  { from: { x: 3, y: 5 }, to: { x: 3, y: 3 }, discard: { x: 3, y: 4 } },
+  { from: { x: 1, y: 3 }, to: { x: 3, y: 3 }, discard: { x: 2, y: 3 } },
+  { from: { x: 3, y: 1 }, to: { x: 3, y: 3 }, discard: { x: 3, y: 2 } }
+]
+MOVE selected: 1
+nextMoves: [
+  { from: { x: 5, y: 4 }, to: { x: 3, y: 4 }, discard: { x: 4, y: 4 } },
+  { from: { x: 1, y: 4 }, to: { x: 3, y: 4 }, discard: { x: 2, y: 4 } },
+  { from: { x: 3, y: 2 }, to: { x: 3, y: 4 }, discard: { x: 3, y: 3 } }
+]
+MOVE selected: 1
+nextMoves: [
+  { from: { x: 1, y: 2 }, to: { x: 1, y: 4 }, discard: { x: 1, y: 3 } },
+  { from: { x: 4, y: 4 }, to: { x: 2, y: 4 }, discard: { x: 3, y: 4 } },
+  { from: { x: 2, y: 6 }, to: { x: 2, y: 4 }, discard: { x: 2, y: 5 } },
+  { from: { x: 2, y: 2 }, to: { x: 2, y: 4 }, discard: { x: 2, y: 3 } },
+  { from: { x: 3, y: 3 }, to: { x: 3, y: 5 }, discard: { x: 3, y: 4 } }
+]
+MOVE selected: 3
+nextMoves: [
+  { from: { x: 3, y: 4 }, to: { x: 1, y: 4 }, discard: { x: 2, y: 4 } },
+  { from: { x: 1, y: 2 }, to: { x: 1, y: 4 }, discard: { x: 1, y: 3 } },
+  { from: { x: 4, y: 2 }, to: { x: 2, y: 2 }, discard: { x: 3, y: 2 } },
+  { from: { x: 0, y: 2 }, to: { x: 2, y: 2 }, discard: { x: 1, y: 2 } },
+  { from: { x: 2, y: 0 }, to: { x: 2, y: 2 }, discard: { x: 2, y: 1 } },
+  { from: { x: 4, y: 3 }, to: { x: 2, y: 3 }, discard: { x: 3, y: 3 } },
+  { from: { x: 2, y: 5 }, to: { x: 2, y: 3 }, discard: { x: 2, y: 4 } },
+  { from: { x: 0, y: 3 }, to: { x: 2, y: 3 }, discard: { x: 1, y: 3 } },
+  { from: { x: 3, y: 3 }, to: { x: 3, y: 5 }, discard: { x: 3, y: 4 } }
+]
+MOVE selected: 2
+nextMoves: [
+  { from: { x: 3, y: 4 }, to: { x: 1, y: 4 }, discard: { x: 2, y: 4 } },
+  { from: { x: 1, y: 2 }, to: { x: 1, y: 4 }, discard: { x: 1, y: 3 } },
+  { from: { x: 4, y: 3 }, to: { x: 2, y: 3 }, discard: { x: 3, y: 3 } },
+  { from: { x: 2, y: 5 }, to: { x: 2, y: 3 }, discard: { x: 2, y: 4 } },
+  { from: { x: 0, y: 3 }, to: { x: 2, y: 3 }, discard: { x: 1, y: 3 } },
+  { from: { x: 2, y: 1 }, to: { x: 2, y: 3 }, discard: { x: 2, y: 2 } },
+  { from: { x: 3, y: 4 }, to: { x: 3, y: 2 }, discard: { x: 3, y: 3 } },
+  { from: { x: 1, y: 2 }, to: { x: 3, y: 2 }, discard: { x: 2, y: 2 } },
+  { from: { x: 3, y: 0 }, to: { x: 3, y: 2 }, discard: { x: 3, y: 1 } },
+  { from: { x: 3, y: 3 }, to: { x: 3, y: 5 }, discard: { x: 3, y: 4 } },
+  { from: { x: 6, y: 2 }, to: { x: 4, y: 2 }, discard: { x: 5, y: 2 } },
+  { from: { x: 4, y: 4 }, to: { x: 4, y: 2 }, discard: { x: 4, y: 3 } },
+  { from: { x: 4, y: 0 }, to: { x: 4, y: 2 }, discard: { x: 4, y: 1 } }
+]
+MOVE selected: 12
+nextMoves: [
+  { from: { x: 3, y: 4 }, to: { x: 1, y: 4 }, discard: { x: 2, y: 4 } },
+  { from: { x: 1, y: 2 }, to: { x: 1, y: 4 }, discard: { x: 1, y: 3 } },
+  { from: { x: 4, y: 3 }, to: { x: 2, y: 3 }, discard: { x: 3, y: 3 } },
+  { from: { x: 2, y: 5 }, to: { x: 2, y: 3 }, discard: { x: 2, y: 4 } },
+  { from: { x: 0, y: 3 }, to: { x: 2, y: 3 }, discard: { x: 1, y: 3 } },
+  { from: { x: 2, y: 1 }, to: { x: 2, y: 3 }, discard: { x: 2, y: 2 } },
+  { from: { x: 5, y: 2 }, to: { x: 3, y: 2 }, discard: { x: 4, y: 2 } },
+  { from: { x: 3, y: 4 }, to: { x: 3, y: 2 }, discard: { x: 3, y: 3 } },
+  { from: { x: 1, y: 2 }, to: { x: 3, y: 2 }, discard: { x: 2, y: 2 } },
+  { from: { x: 3, y: 0 }, to: { x: 3, y: 2 }, discard: { x: 3, y: 1 } },
+  { from: { x: 3, y: 3 }, to: { x: 3, y: 5 }, discard: { x: 3, y: 4 } },
+  { from: { x: 2, y: 0 }, to: { x: 4, y: 0 }, discard: { x: 3, y: 0 } },
+  { from: { x: 4, y: 3 }, to: { x: 4, y: 1 }, discard: { x: 4, y: 2 } },
+  { from: { x: 2, y: 1 }, to: { x: 4, y: 1 }, discard: { x: 3, y: 1 } }
+]
+MOVE selected: 1
+nextMoves: [
+  { from: { x: 4, y: 3 }, to: { x: 2, y: 3 }, discard: { x: 3, y: 3 } },
+  { from: { x: 2, y: 5 }, to: { x: 2, y: 3 }, discard: { x: 2, y: 4 } },
+  { from: { x: 2, y: 1 }, to: { x: 2, y: 3 }, discard: { x: 2, y: 2 } },
+  { from: { x: 5, y: 2 }, to: { x: 3, y: 2 }, discard: { x: 4, y: 2 } },
+  { from: { x: 3, y: 4 }, to: { x: 3, y: 2 }, discard: { x: 3, y: 3 } },
+  { from: { x: 3, y: 0 }, to: { x: 3, y: 2 }, discard: { x: 3, y: 1 } },
+  { from: { x: 3, y: 3 }, to: { x: 3, y: 5 }, discard: { x: 3, y: 4 } },
+  { from: { x: 2, y: 0 }, to: { x: 4, y: 0 }, discard: { x: 3, y: 0 } },
+  { from: { x: 4, y: 3 }, to: { x: 4, y: 1 }, discard: { x: 4, y: 2 } },
+  { from: { x: 2, y: 1 }, to: { x: 4, y: 1 }, discard: { x: 3, y: 1 } }
+]
+MOVE selected: 5
+nextMoves: [
+  { from: { x: 3, y: 2 }, to: { x: 1, y: 2 }, discard: { x: 2, y: 2 } },
+  { from: { x: 4, y: 3 }, to: { x: 2, y: 3 }, discard: { x: 3, y: 3 } },
+  { from: { x: 2, y: 5 }, to: { x: 2, y: 3 }, discard: { x: 2, y: 4 } },
+  { from: { x: 2, y: 1 }, to: { x: 2, y: 3 }, discard: { x: 2, y: 2 } },
+  { from: { x: 3, y: 3 }, to: { x: 3, y: 1 }, discard: { x: 3, y: 2 } },
+  { from: { x: 3, y: 3 }, to: { x: 3, y: 5 }, discard: { x: 3, y: 4 } },
+  { from: { x: 4, y: 3 }, to: { x: 4, y: 1 }, discard: { x: 4, y: 2 } }
+]
+MOVE selected: 2
+nextMoves: [
+  { from: { x: 3, y: 2 }, to: { x: 1, y: 2 }, discard: { x: 2, y: 2 } },
+  { from: { x: 3, y: 3 }, to: { x: 1, y: 3 }, discard: { x: 2, y: 3 } },
+  { from: { x: 4, y: 4 }, to: { x: 2, y: 4 }, discard: { x: 3, y: 4 } },
+  { from: { x: 0, y: 4 }, to: { x: 2, y: 4 }, discard: { x: 1, y: 4 } },
+  { from: { x: 2, y: 2 }, to: { x: 2, y: 4 }, discard: { x: 2, y: 3 } },
+  { from: { x: 3, y: 3 }, to: { x: 3, y: 1 }, discard: { x: 3, y: 2 } },
+  { from: { x: 3, y: 3 }, to: { x: 3, y: 5 }, discard: { x: 3, y: 4 } },
+  { from: { x: 4, y: 3 }, to: { x: 4, y: 1 }, discard: { x: 4, y: 2 } }
+]
+MOVE selected: 7
+nextMoves: [
+  { from: { x: 3, y: 2 }, to: { x: 1, y: 2 }, discard: { x: 2, y: 2 } },
+  { from: { x: 3, y: 3 }, to: { x: 1, y: 3 }, discard: { x: 2, y: 3 } },
+  { from: { x: 4, y: 4 }, to: { x: 2, y: 4 }, discard: { x: 3, y: 4 } },
+  { from: { x: 0, y: 4 }, to: { x: 2, y: 4 }, discard: { x: 1, y: 4 } },
+  { from: { x: 2, y: 2 }, to: { x: 2, y: 4 }, discard: { x: 2, y: 3 } },
+  { from: { x: 3, y: 3 }, to: { x: 3, y: 1 }, discard: { x: 3, y: 2 } },
+  { from: { x: 3, y: 3 }, to: { x: 3, y: 5 }, discard: { x: 3, y: 4 } },
+  { from: { x: 6, y: 2 }, to: { x: 4, y: 2 }, discard: { x: 5, y: 2 } },
+  { from: { x: 2, y: 2 }, to: { x: 4, y: 2 }, discard: { x: 3, y: 2 } },
+  { from: { x: 6, y: 3 }, to: { x: 4, y: 3 }, discard: { x: 5, y: 3 } },
+  { from: { x: 4, y: 5 }, to: { x: 4, y: 3 }, discard: { x: 4, y: 4 } },
+  { from: { x: 2, y: 3 }, to: { x: 4, y: 3 }, discard: { x: 3, y: 3 } }
+]
+MOVE selected: 3
+nextMoves: [
+  { from: { x: 0, y: 2 }, to: { x: 0, y: 4 }, discard: { x: 0, y: 3 } },
+  { from: { x: 3, y: 2 }, to: { x: 1, y: 2 }, discard: { x: 2, y: 2 } },
+  { from: { x: 3, y: 3 }, to: { x: 1, y: 3 }, discard: { x: 2, y: 3 } },
+  { from: { x: 3, y: 4 }, to: { x: 1, y: 4 }, discard: { x: 2, y: 4 } },
+  { from: { x: 2, y: 3 }, to: { x: 2, y: 5 }, discard: { x: 2, y: 4 } },
+  { from: { x: 3, y: 3 }, to: { x: 3, y: 1 }, discard: { x: 3, y: 2 } },
+  { from: { x: 3, y: 3 }, to: { x: 3, y: 5 }, discard: { x: 3, y: 4 } },
+  { from: { x: 6, y: 2 }, to: { x: 4, y: 2 }, discard: { x: 5, y: 2 } },
+  { from: { x: 2, y: 2 }, to: { x: 4, y: 2 }, discard: { x: 3, y: 2 } },
+  { from: { x: 6, y: 3 }, to: { x: 4, y: 3 }, discard: { x: 5, y: 3 } },
+  { from: { x: 4, y: 5 }, to: { x: 4, y: 3 }, discard: { x: 4, y: 4 } },
+  { from: { x: 2, y: 3 }, to: { x: 4, y: 3 }, discard: { x: 3, y: 3 } }
+]
+MOVE selected: 5
+nextMoves: [
+  { from: { x: 0, y: 2 }, to: { x: 0, y: 4 }, discard: { x: 0, y: 3 } },
+  { from: { x: 3, y: 4 }, to: { x: 1, y: 4 }, discard: { x: 2, y: 4 } },
+  { from: { x: 2, y: 3 }, to: { x: 2, y: 5 }, discard: { x: 2, y: 4 } },
+  { from: { x: 6, y: 2 }, to: { x: 4, y: 2 }, discard: { x: 5, y: 2 } },
+  { from: { x: 6, y: 3 }, to: { x: 4, y: 3 }, discard: { x: 5, y: 3 } },
+  { from: { x: 4, y: 5 }, to: { x: 4, y: 3 }, discard: { x: 4, y: 4 } }
+]
+MOVE selected: 2
+nextMoves: [
+  { from: { x: 0, y: 2 }, to: { x: 0, y: 4 }, discard: { x: 0, y: 3 } },
+  { from: { x: 2, y: 1 }, to: { x: 2, y: 3 }, discard: { x: 2, y: 2 } },
+  { from: { x: 4, y: 4 }, to: { x: 2, y: 4 }, discard: { x: 3, y: 4 } },
+  { from: { x: 2, y: 6 }, to: { x: 2, y: 4 }, discard: { x: 2, y: 5 } },
+  { from: { x: 6, y: 2 }, to: { x: 4, y: 2 }, discard: { x: 5, y: 2 } },
+  { from: { x: 6, y: 3 }, to: { x: 4, y: 3 }, discard: { x: 5, y: 3 } },
+  { from: { x: 4, y: 5 }, to: { x: 4, y: 3 }, discard: { x: 4, y: 4 } }
+]
+MOVE selected: 6
+nextMoves: [
+  { from: { x: 0, y: 2 }, to: { x: 0, y: 4 }, discard: { x: 0, y: 3 } },
+  { from: { x: 2, y: 1 }, to: { x: 2, y: 3 }, discard: { x: 2, y: 2 } },
+  { from: { x: 2, y: 6 }, to: { x: 2, y: 4 }, discard: { x: 2, y: 5 } },
+  { from: { x: 5, y: 3 }, to: { x: 3, y: 3 }, discard: { x: 4, y: 3 } },
+  { from: { x: 6, y: 2 }, to: { x: 4, y: 2 }, discard: { x: 5, y: 2 } },
+  { from: { x: 6, y: 4 }, to: { x: 4, y: 4 }, discard: { x: 5, y: 4 } }
+]
+MOVE selected: 5
+nextMoves: [
+  { from: { x: 0, y: 2 }, to: { x: 0, y: 4 }, discard: { x: 0, y: 3 } },
+  { from: { x: 2, y: 1 }, to: { x: 2, y: 3 }, discard: { x: 2, y: 2 } },
+  { from: { x: 4, y: 4 }, to: { x: 2, y: 4 }, discard: { x: 3, y: 4 } },
+  { from: { x: 2, y: 6 }, to: { x: 2, y: 4 }, discard: { x: 2, y: 5 } },
+  { from: { x: 5, y: 3 }, to: { x: 3, y: 3 }, discard: { x: 4, y: 3 } },
+  { from: { x: 6, y: 2 }, to: { x: 4, y: 2 }, discard: { x: 5, y: 2 } },
+  { from: { x: 4, y: 4 }, to: { x: 4, y: 2 }, discard: { x: 4, y: 3 } },
+  { from: { x: 4, y: 3 }, to: { x: 4, y: 5 }, discard: { x: 4, y: 4 } },
+  { from: { x: 3, y: 4 }, to: { x: 5, y: 4 }, discard: { x: 4, y: 4 } },
+  { from: { x: 5, y: 2 }, to: { x: 5, y: 4 }, discard: { x: 5, y: 3 } },
+  { from: { x: 6, y: 2 }, to: { x: 6, y: 4 }, discard: { x: 6, y: 3 } }
+]
+MOVE selected: 7
+nextMoves: [
+  { from: { x: 0, y: 2 }, to: { x: 0, y: 4 }, discard: { x: 0, y: 3 } },
+  { from: { x: 2, y: 1 }, to: { x: 2, y: 3 }, discard: { x: 2, y: 2 } },
+  { from: { x: 2, y: 6 }, to: { x: 2, y: 4 }, discard: { x: 2, y: 5 } },
+  { from: { x: 6, y: 2 }, to: { x: 4, y: 2 }, discard: { x: 5, y: 2 } },
+  { from: { x: 6, y: 3 }, to: { x: 4, y: 3 }, discard: { x: 5, y: 3 } },
+  { from: { x: 4, y: 6 }, to: { x: 4, y: 4 }, discard: { x: 4, y: 5 } },
+  { from: { x: 5, y: 2 }, to: { x: 5, y: 4 }, discard: { x: 5, y: 3 } },
+  { from: { x: 6, y: 2 }, to: { x: 6, y: 4 }, discard: { x: 6, y: 3 } }
+]
+MOVE selected: 5
+nextMoves: [
+  { from: { x: 0, y: 2 }, to: { x: 0, y: 4 }, discard: { x: 0, y: 3 } },
+  { from: { x: 2, y: 1 }, to: { x: 2, y: 3 }, discard: { x: 2, y: 2 } },
+  { from: { x: 4, y: 4 }, to: { x: 2, y: 4 }, discard: { x: 3, y: 4 } },
+  { from: { x: 2, y: 6 }, to: { x: 2, y: 4 }, discard: { x: 2, y: 5 } },
+  { from: { x: 6, y: 2 }, to: { x: 4, y: 2 }, discard: { x: 5, y: 2 } },
+  { from: { x: 6, y: 3 }, to: { x: 4, y: 3 }, discard: { x: 5, y: 3 } },
+  { from: { x: 2, y: 6 }, to: { x: 4, y: 6 }, discard: { x: 3, y: 6 } },
+  { from: { x: 3, y: 4 }, to: { x: 5, y: 4 }, discard: { x: 4, y: 4 } },
+  { from: { x: 5, y: 2 }, to: { x: 5, y: 4 }, discard: { x: 5, y: 3 } },
+  { from: { x: 6, y: 2 }, to: { x: 6, y: 4 }, discard: { x: 6, y: 3 } }
+]
+MOVE selected: 9
+nextMoves: [
+  { from: { x: 0, y: 2 }, to: { x: 0, y: 4 }, discard: { x: 0, y: 3 } },
+  { from: { x: 2, y: 1 }, to: { x: 2, y: 3 }, discard: { x: 2, y: 2 } },
+  { from: { x: 4, y: 4 }, to: { x: 2, y: 4 }, discard: { x: 3, y: 4 } },
+  { from: { x: 2, y: 6 }, to: { x: 2, y: 4 }, discard: { x: 2, y: 5 } },
+  { from: { x: 2, y: 6 }, to: { x: 4, y: 6 }, discard: { x: 3, y: 6 } },
+  { from: { x: 3, y: 4 }, to: { x: 5, y: 4 }, discard: { x: 4, y: 4 } },
+  { from: { x: 5, y: 2 }, to: { x: 5, y: 4 }, discard: { x: 5, y: 3 } }
+]
+MOVE selected: 5
+nextMoves: [
+  { from: { x: 0, y: 2 }, to: { x: 0, y: 4 }, discard: { x: 0, y: 3 } },
+  { from: { x: 2, y: 1 }, to: { x: 2, y: 3 }, discard: { x: 2, y: 2 } },
+  { from: { x: 2, y: 6 }, to: { x: 2, y: 4 }, discard: { x: 2, y: 5 } },
+  { from: { x: 6, y: 4 }, to: { x: 4, y: 4 }, discard: { x: 5, y: 4 } },
+  { from: { x: 2, y: 6 }, to: { x: 4, y: 6 }, discard: { x: 3, y: 6 } }
+]
+MOVE selected: 0
+nextMoves: [
+  { from: { x: 2, y: 1 }, to: { x: 2, y: 3 }, discard: { x: 2, y: 2 } },
+  { from: { x: 2, y: 6 }, to: { x: 2, y: 4 }, discard: { x: 2, y: 5 } },
+  { from: { x: 6, y: 4 }, to: { x: 4, y: 4 }, discard: { x: 5, y: 4 } },
+  { from: { x: 2, y: 6 }, to: { x: 4, y: 6 }, discard: { x: 3, y: 6 } }
+]
+MOVE selected: 3
+nextMoves: [
+  { from: { x: 2, y: 1 }, to: { x: 2, y: 3 }, discard: { x: 2, y: 2 } },
+  { from: { x: 6, y: 4 }, to: { x: 4, y: 4 }, discard: { x: 5, y: 4 } }
+]
+MOVE selected: 1
+nextMoves: [
+  { from: { x: 2, y: 1 }, to: { x: 2, y: 3 }, discard: { x: 2, y: 2 } },
+  { from: { x: 5, y: 2 }, to: { x: 5, y: 4 }, discard: { x: 5, y: 3 } }
+]
+MOVE selected: 0
+nextMoves: [
+  { from: { x: 4, y: 1 }, to: { x: 2, y: 1 }, discard: { x: 3, y: 1 } },
+  { from: { x: 5, y: 2 }, to: { x: 5, y: 4 }, discard: { x: 5, y: 3 } }
+]
+MOVE selected: 0
+nextMoves: [
+  { from: { x: 2, y: 0 }, to: { x: 2, y: 2 }, discard: { x: 2, y: 1 } },
+  { from: { x: 5, y: 2 }, to: { x: 5, y: 4 }, discard: { x: 5, y: 3 } }
+]
+MOVE selected: 1
+nextMoves: [
+  { from: { x: 2, y: 0 }, to: { x: 2, y: 2 }, discard: { x: 2, y: 1 } },
+  { from: { x: 5, y: 4 }, to: { x: 3, y: 4 }, discard: { x: 4, y: 4 } },
+  { from: { x: 4, y: 4 }, to: { x: 6, y: 4 }, discard: { x: 5, y: 4 } }
+]
+MOVE selected: 1
+nextMoves: [
+  { from: { x: 2, y: 0 }, to: { x: 2, y: 2 }, discard: { x: 2, y: 1 } }
+]
+MOVE selected: 0
+nextMoves: [
+  { from: { x: 2, y: 3 }, to: { x: 2, y: 1 }, discard: { x: 2, y: 2 } },
+  { from: { x: 2, y: 2 }, to: { x: 2, y: 4 }, discard: { x: 2, y: 3 } }
+]
+MOVE selected: 1
+nextMoves: [
+  { from: { x: 3, y: 4 }, to: { x: 1, y: 4 }, discard: { x: 2, y: 4 } },
+  { from: { x: 2, y: 5 }, to: { x: 2, y: 3 }, discard: { x: 2, y: 4 } },
+  { from: { x: 2, y: 4 }, to: { x: 2, y: 6 }, discard: { x: 2, y: 5 } },
+  { from: { x: 2, y: 4 }, to: { x: 4, y: 4 }, discard: { x: 3, y: 4 } }
+]
+MOVE selected: 0
+nextMoves: [
+  { from: { x: 0, y: 4 }, to: { x: 2, y: 4 }, discard: { x: 1, y: 4 } }
+]
+MOVE selected: 0
+nextMoves: [
+  { from: { x: 2, y: 5 }, to: { x: 2, y: 3 }, discard: { x: 2, y: 4 } },
+  { from: { x: 2, y: 4 }, to: { x: 2, y: 6 }, discard: { x: 2, y: 5 } }
+]
+MOVE selected: 1
+nextMoves: []
+MOVES possible: 0
+    1 1 1     
+    1 1 1     
+1 1 1 1 1 1 1 
+1 1 1 0 1 1 1 
+1 1 1 1 1 1 1 
+    1 1 1     
+    1 1 1     
+--------------
+    1 1 1     
+    1 1 1     
+1 1 1 1 1 1 1 
+1 1 1 1 0 0 1 
+1 1 1 1 1 1 1 
+    1 1 1     
+    1 1 1     
+--------------
+    1 1 1     
+    1 1 0     
+1 1 1 1 0 1 1 
+1 1 1 1 1 0 1 
+1 1 1 1 1 1 1 
+    1 1 1     
+    1 1 1     
+--------------
+    1 1 1     
+    1 1 0     
+1 1 0 0 1 1 1 
+1 1 1 1 1 0 1 
+1 1 1 1 1 1 1 
+    1 1 1     
+    1 1 1     
+--------------
+    1 1 1     
+    1 1 0     
+1 1 1 0 1 1 1 
+1 1 0 1 1 0 1 
+1 1 0 1 1 1 1 
+    1 1 1     
+    1 1 1     
+--------------
+    1 1 1     
+    1 1 0     
+1 1 1 0 1 1 1 
+1 1 0 1 1 0 1 
+0 0 1 1 1 1 1 
+    1 1 1     
+    1 1 1     
+--------------
+    1 1 1     
+    0 0 1     
+1 1 1 0 1 1 1 
+1 1 0 1 1 0 1 
+0 0 1 1 1 1 1 
+    1 1 1     
+    1 1 1     
+--------------
+    1 1 1     
+    0 0 1     
+1 1 1 0 1 1 1 
+0 0 1 1 1 0 1 
+0 0 1 1 1 1 1 
+    1 1 1     
+    1 1 1     
+--------------
+    1 1 1     
+    0 0 1     
+1 1 1 1 0 0 1 
+0 0 1 1 1 0 1 
+0 0 1 1 1 1 1 
+    1 1 1     
+    1 1 1     
+--------------
+    1 1 1     
+    0 0 1     
+1 1 1 1 0 0 1 
+0 0 1 1 1 0 1 
+0 1 0 0 1 1 1 
+    1 1 1     
+    1 1 1     
+--------------
+    1 1 0     
+    0 0 0     
+1 1 1 1 1 0 1 
+0 0 1 1 1 0 1 
+0 1 0 0 1 1 1 
+    1 1 1     
+    1 1 1     
+--------------
+    1 1 0     
+    0 0 0     
+1 1 1 1 1 0 1 
+0 1 0 0 1 0 1 
+0 1 0 0 1 1 1 
+    1 1 1     
+    1 1 1     
+--------------
+    1 1 0     
+    0 0 0     
+1 1 1 0 0 1 1 
+0 1 0 0 1 0 1 
+0 1 0 0 1 1 1 
+    1 1 1     
+    1 1 1     
+--------------
+    1 1 0     
+    0 0 0     
+1 1 1 0 0 1 1 
+0 1 0 0 1 0 1 
+0 1 0 1 0 0 1 
+    1 1 1     
+    1 1 1     
+--------------
+    1 1 0     
+    0 0 0     
+1 1 1 0 0 1 1 
+0 1 0 0 1 0 1 
+0 1 0 1 1 0 1 
+    1 1 0     
+    1 1 0     
+--------------
+    1 1 0     
+    0 0 0     
+1 1 1 0 0 1 1 
+0 1 0 0 1 0 1 
+0 1 0 0 0 1 1 
+    1 1 0     
+    1 1 0     
+--------------
+    1 1 0     
+    0 0 0     
+1 1 1 0 0 1 1 
+0 1 0 0 1 0 1 
+0 1 0 0 1 0 0 
+    1 1 0     
+    1 1 0     
+--------------
+    1 1 0     
+    0 0 0     
+1 1 1 0 0 1 1 
+0 1 0 0 1 0 1 
+0 1 0 0 1 0 0 
+    1 1 0     
+    0 0 1     
+--------------
+    1 1 0     
+    0 0 0     
+1 1 1 0 0 1 1 
+0 1 0 0 0 0 1 
+0 1 0 0 0 0 0 
+    1 1 1     
+    0 0 1     
+--------------
+    0 0 1     
+    0 0 0     
+1 1 1 0 0 1 1 
+0 1 0 0 0 0 1 
+0 1 0 0 0 0 0 
+    1 1 1     
+    0 0 1     
+--------------
+    0 0 1     
+    0 0 0     
+1 1 1 0 0 1 0 
+0 1 0 0 0 0 0 
+0 1 0 0 0 0 1 
+    1 1 1     
+    0 0 1     
+--------------
+    0 0 1     
+    0 0 0     
+1 1 1 0 0 1 0 
+0 1 0 0 0 0 0 
+0 1 0 0 1 0 1 
+    1 1 0     
+    0 0 0     
+--------------
+    0 0 1     
+    0 0 0     
+1 0 0 1 0 1 0 
+0 1 0 0 0 0 0 
+0 1 0 0 1 0 1 
+    1 1 0     
+    0 0 0     
+--------------
+    0 0 1     
+    0 0 0     
+1 1 0 1 0 1 0 
+0 0 0 0 0 0 0 
+0 0 0 0 1 0 1 
+    1 1 0     
+    0 0 0     
+--------------
+    0 0 1     
+    0 0 0     
+1 1 0 1 0 1 0 
+0 0 0 0 0 0 0 
+0 0 0 0 1 0 1 
+    0 0 1     
+    0 0 0     
+--------------
+    0 0 1     
+    0 0 0     
+1 1 0 1 0 1 0 
+0 0 0 0 1 0 0 
+0 0 0 0 0 0 1 
+    0 0 0     
+    0 0 0     
+--------------
+    0 0 1     
+    0 0 0     
+0 0 1 1 0 1 0 
+0 0 0 0 1 0 0 
+0 0 0 0 0 0 1 
+    0 0 0     
+    0 0 0     
+--------------
+    0 0 1     
+    0 0 0     
+0 0 0 0 1 1 0 
+0 0 0 0 1 0 0 
+0 0 0 0 0 0 1 
+    0 0 0     
+    0 0 0     
+--------------
+    0 0 1     
+    0 0 1     
+0 0 0 0 0 1 0 
+0 0 0 0 0 0 0 
+0 0 0 0 0 0 1 
+    0 0 0     
+    0 0 0     
+--------------
+    0 0 0     
+    0 0 0     
+0 0 0 0 1 1 0 
+0 0 0 0 0 0 0 
+0 0 0 0 0 0 1 
+    0 0 0     
+    0 0 0     
+--------------
+    0 0 0     
+    0 0 0     
+0 0 0 0 0 0 1 
+0 0 0 0 0 0 0 
+0 0 0 0 0 0 1 
+    0 0 0     
+    0 0 0     
+--------------
