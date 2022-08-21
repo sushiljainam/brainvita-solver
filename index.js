@@ -36,4 +36,4 @@ async function attemptAllSolutions() {
 }
 
 // attemptAllSolutions();
-runSavedSolution()
+runSavedSolution(boardSize, { remaining: 2 });
