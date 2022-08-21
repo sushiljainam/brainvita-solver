@@ -1,26 +1,11 @@
 const { clone, concat, includes } = require("ramda");
 const { refillMatrix, runSpecificPath, printBoard, getAllPaths } = require("./lib/common");
+const { runSavedSolution } = require("./lib/printSavedSolution");
 const { saveToDb, closeDb, getSaved } = require("./lib/saveToDb");
 
 
 const boardSize = 7;
 
-async function runSavedSolution() {
-    let gameMatrix = refillMatrix(boardSize);
-    getSaved({ remaining: 2 }).then((saved) => {
-        console.log('saved', saved);
-        if (!saved) {
-            closeDb();
-            return;
-        }
-        let [lastBoard, stepBoards] = runSpecificPath(gameMatrix, saved.movePicked);
-        for (let i = 0; i < stepBoards.length; i++) {
-            const stepBoard = stepBoards[i];
-            printBoard(stepBoard);
-        }
-        closeDb();
-    });
-}
 async function attemptAllSolutions() {
     let discardedCount = 0;
     let gameMatrix = refillMatrix(boardSize);
@@ -50,5 +35,5 @@ async function attemptAllSolutions() {
     // printBoard(board1)
 }
 
-attemptAllSolutions();
-// runSavedSolution();
+// attemptAllSolutions();
+runSavedSolution()
