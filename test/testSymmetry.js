@@ -1,5 +1,5 @@
 const { deepEqual } = require('assert');
-const { findAllSymmetricMetrices } = require("../lib/findSymmetry");
+const { findAllSymmetricMetrices, findUniqueMatrices } = require("../lib/findSymmetry");
 
 const output = findAllSymmetricMetrices([[1, 2], [3, 4]])
 deepEqual(output, [
@@ -12,5 +12,11 @@ deepEqual(output, [
     [[4, 2], [3, 1]],
     [[3, 4], [1, 2]]
 ], 'findAllSymmetricMetrices not working fine');
+
+const output2 = findUniqueMatrices([
+    [[1, 2], [3, 4]],
+    [[2, 4], [1, 3]],
+]);
+console.log(output2);
 
 console.log('All good!');
