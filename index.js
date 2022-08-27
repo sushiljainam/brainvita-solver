@@ -13,7 +13,14 @@ let mode = 'resumeSolutionsDB'; // 'renderSavedSolution' // 'resumeSolutionsDB'
 let out = 'db'; // 'console' 'file'
 
 if (mode === 'resumeSolutionsDB') {
-    resumeSolutionsDB(boardSize, saveToDb, closeDb);
+    (async () => {
+        await resumeSolutionsDB(boardSize, saveToDb, closeDb);
+        // await resumeSolutionsDB(boardSize, saveToDb, closeDb);
+        // await resumeSolutionsDB(boardSize, saveToDb, closeDb);
+        // await resumeSolutionsDB(boardSize, saveToDb, closeDb);
+        // await resumeSolutionsDB(boardSize, saveToDb, closeDb);
+        // await resumeSolutionsDB(boardSize, saveToDb, closeDb);
+    })()
 }
 
 if (mode === 'findSolutions' && out === 'console') {
