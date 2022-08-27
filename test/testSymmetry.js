@@ -18,5 +18,8 @@ const output2 = findUniqueMatrices([
     [[2, 4], [1, 3]],
 ]);
 console.log(output2);
+deepEqual(output2, [
+    [[1, 2], [3, 4]],
+]);
 
 console.log('All good!');
