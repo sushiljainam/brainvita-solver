@@ -1,12 +1,24 @@
 
 const { runSavedSolution } = require("./lib/printSavedSolution");
 const { attemptAllSolutions } = require("./lib/runAllSolutions");
+const { saveToDb, closeDb } = require("./saveToDb");
 
 const boardSize = 7;
 
-attemptAllSolutions(boardSize);
-runSavedSolution(boardSize, { remaining: 2 });
-// pass saver fn to attemptAllSolutions
+const mode = 'findSolutions'; // 'renderSavedSolution'
+const out = 'db'; // 'console' 'file'
+
+if (mode === 'findSolutions' && out === 'db') {
+    attemptAllSolutions(boardSize, saveToDb, closeDb);
+}
+
+if (mode === 'findSolutions' && out === 'console') {
+    attemptAllSolutions(boardSize, console.log, console.log.bind(console, 'ends'));
+}
+
+if (mode === 'renderSavedSolution') {
+    runSavedSolution(boardSize, { remaining: 2 });
+}
 
 // build or import matrix symmetry checks
 // save all matrix as one-string in DB,
