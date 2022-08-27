@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "2d-array-rotation": "^2.1.1",
+    "flip-array": "^0.1.0",
     "mongodb": "^4.9.0",
     "ramda": "^0.28.0"
   }

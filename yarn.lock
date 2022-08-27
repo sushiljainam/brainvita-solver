@@ -50,6 +50,11 @@ denque@^2.1.0:
   resolved "https://registry.yarnpkg.com/denque/-/denque-2.1.0.tgz#e93e1a6569fb5e66f16a3c2a2964617d349d6ab1"
   integrity sha512-HVQE3AAb/pxF8fQAoiqpvg9i3evqug3hoiwakOyZAwJm+6vZehbkYXZ0l4JxS+I3QxM97v5aaRNhj8v5oBhekw==
 
+flip-array@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/flip-array/-/flip-array-0.1.0.tgz#0836c461a8d128272003106bf6721b7d7b93cb0c"
+  integrity sha512-fwj/vk+//2B2SaSZVqgBv7rIQJnkeXvlMWqkKS+qDlrqFne4NDvJjGq6rYmuoYoIbHayjYx1TON36kvbA/doOg==
+
 ieee754@^1.1.13:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.2.1.tgz#8eb7a10a63fff25d15a57b001586d177d1b0d352"
