@@ -20,13 +20,11 @@ if (mode === 'renderSavedSolution') {
     runSavedSolution(boardSize, { remaining: 2 });
 }
 
-// build or import matrix symmetry checks
 // save all matrix as one-string in DB,
 // label them for symmetry and run ALL solutions (2^30 around)
 // via dynamic optimizations and asynchronous/ discontinued execution approach
 // due to solutions are saved in DB
 
-// push repo as public, DONE
 // create a readme,
 // invite people to review or contribute
 // over Teams, Insta, WA/FB, Linkedin groups and circles
