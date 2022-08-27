@@ -1,15 +1,19 @@
 
 const { runSavedSolution } = require("./lib/printSavedSolution");
+const { resumeSolutionsDB } = require("./lib/resumeSolutionsDB");
 const { attemptAllSolutions } = require("./lib/runAllSolutions");
-const { saveToDb, closeDb } = require("./saveToDb");
+const { saveToDb, closeDb } = require("./lib/saveToDb");
 
 const boardSize = 7;
 
-const mode = 'findSolutions'; // 'renderSavedSolution'
-const out = 'db'; // 'console' 'file'
+/**
+ * @param {'findSolutions'|'resumeSolutionsDB'|'renderSavedSolution'} mode
+ */
+let mode = 'resumeSolutionsDB'; // 'renderSavedSolution' // 'resumeSolutionsDB'
+let out = 'db'; // 'console' 'file'
 
-if (mode === 'findSolutions' && out === 'db') {
-    attemptAllSolutions(boardSize, saveToDb, closeDb);
+if (mode === 'resumeSolutionsDB') {
+    resumeSolutionsDB(boardSize, saveToDb, closeDb);
 }
 
 if (mode === 'findSolutions' && out === 'console') {
