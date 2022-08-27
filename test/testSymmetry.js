@@ -3,8 +3,8 @@ const { findAllSymmetricMetrices } = require("../lib/findSymmetry");
 
 const output = findAllSymmetricMetrices([[1, 2], [3, 4]])
 deepEqual(output, [
-    [[1, 2], [3, 4]],
     [[3, 1], [4, 2]],
+    [[1, 2], [3, 4]],
     [[4, 3], [2, 1]],
     [[2, 4], [1, 3]],
     [[1, 3], [2, 4]],

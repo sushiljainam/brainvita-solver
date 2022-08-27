@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "start": "node . > output.txt",
-    "test": "node test > test-results.txt"
+    "test": "node test >& test-results.txt"
   },
   "dependencies": {
     "2d-array-rotation": "^2.1.1",
