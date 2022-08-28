@@ -14,12 +14,12 @@ let out = 'db'; // 'console' 'file'
 
 if (mode === 'resumeSolutionsDB') {
     (async () => {
-        await resumeSolutionsDB(boardSize, saveToDb, closeDb);
-        // await resumeSolutionsDB(boardSize, saveToDb, closeDb);
-        // await resumeSolutionsDB(boardSize, saveToDb, closeDb);
-        // await resumeSolutionsDB(boardSize, saveToDb, closeDb);
-        // await resumeSolutionsDB(boardSize, saveToDb, closeDb);
-        // await resumeSolutionsDB(boardSize, saveToDb, closeDb);
+        // await resumeSolutionsDB();
+        // await resumeSolutionsDB();
+        // await resumeSolutionsDB();
+        // await resumeSolutionsDB();
+        await resumeSolutionsDB();
+        await resumeSolutionsDB(closeDb);
     })()
 }
 
