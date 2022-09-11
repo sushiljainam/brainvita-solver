@@ -28,7 +28,7 @@ if (mode === 'resumeSolutionsDB') {
         // await closeDb();
         /**
          * NEXT OPTIMIZATIONS
-         * use mongo find cursor, EXIT early
+         * use mongo find cursor, EXIT early -- tried this is SLOWER
          * compare boardString directly
          * use indexing -- low priority
          * leave it running full night
