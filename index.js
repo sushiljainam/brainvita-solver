@@ -29,7 +29,7 @@ if (mode === 'resumeSolutionsDB') {
         /**
          * NEXT OPTIMIZATIONS
          * use mongo find cursor, EXIT early -- tried this is SLOWER
-         * compare boardString directly
+         * compare boardString directly -- WAY FASTERRRR NOW from this one
          * use indexing -- low priority
          * leave it running full night
          */
