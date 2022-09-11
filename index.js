@@ -26,6 +26,13 @@ if (mode === 'resumeSolutionsDB') {
         // await saveAllStepsBoards();
         // await findSymmetricBoards();
         // await closeDb();
+        /**
+         * NEXT OPTIMIZATIONS
+         * use mongo find cursor, EXIT early
+         * compare boardString directly
+         * use indexing -- low priority
+         * leave it running full night
+         */
     })()
 }
 
