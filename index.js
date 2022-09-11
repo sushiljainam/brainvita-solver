@@ -21,6 +21,8 @@ if (mode === 'resumeSolutionsDB') {
         // await resumeSolutionsDB();
         // await resumeSolutionsDB(closeDb);
         await decideAndSave();
+        await decideAndSave();
+        await decideAndSave(closeDb);
         // await saveAllStepsBoards();
         // await findSymmetricBoards();
         // await closeDb();
