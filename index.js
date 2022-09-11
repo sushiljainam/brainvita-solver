@@ -1,6 +1,6 @@
 
 const { runSavedSolution } = require("./lib/printSavedSolution");
-const { resumeSolutionsDB } = require("./lib/resumeSolutionsDB");
+const { resumeSolutionsDB, saveAllStepsBoards } = require("./lib/resumeSolutionsDB");
 const { attemptAllSolutions } = require("./lib/runAllSolutions");
 const { saveToDb, closeDb } = require("./lib/saveToDb");
 
@@ -18,8 +18,9 @@ if (mode === 'resumeSolutionsDB') {
         // await resumeSolutionsDB();
         // await resumeSolutionsDB();
         // await resumeSolutionsDB();
-        await resumeSolutionsDB();
-        await resumeSolutionsDB(closeDb);
+        // await resumeSolutionsDB();
+        // await resumeSolutionsDB(closeDb);
+        await saveAllStepsBoards(closeDb)
     })()
 }
 
