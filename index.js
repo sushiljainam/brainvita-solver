@@ -27,23 +27,23 @@ if (mode === 'resumeSolutionsDB') {
         // await resumeSolutionsDB();
         // await resumeSolutionsDB(closeDb);
         // ----
-        async function partial(cb) {
-            console.log('partial call two', twoMinsFromStart, moment(), moment().isAfter(twoMinsFromStart));
+        async function partial(cb, c) {
+            console.log('partial call two', c, twoMinsFromStart, moment(), moment().isAfter(twoMinsFromStart));
             if (moment().isAfter(twoMinsFromStart)) {
-                console.log('partial call four');
+                console.log('partial call four', c);
                 await decideAndSave(cb);
-                console.timeLog('resume');
+                console.timeLog('resume', c);
                 return;
             } else {
-                console.log('partial call three');
+                console.log('partial call three', c);
                 await decideAndSave();
-                console.timeLog('resume');
-                await partial(cb);
+                console.timeLog('resume', c);
+                await partial(cb, c + 1);
             }
         }
         console.timeLog('resume');
-        console.log('partial call one');
-        await partial(closeDb);
+        console.log('partial call one', 0);
+        await partial(closeDb, 0);
         console.timeEnd('resume');
         // await decideAndSave(closeDb);
         // await saveAllStepsBoards();
