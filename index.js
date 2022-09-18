@@ -1,4 +1,5 @@
 
+const moment = require("moment");
 const { runSavedSolution } = require("./lib/printSavedSolution");
 const { resumeSolutionsDB, saveAllStepsBoards, findSymmetricBoards, decideAndSave } = require("./lib/resumeSolutionsDB");
 const { attemptAllSolutions } = require("./lib/runAllSolutions");
@@ -12,6 +13,11 @@ const boardSize = 7;
 let mode = 'resumeSolutionsDB'; // 'renderSavedSolution' // 'resumeSolutionsDB'
 let out = 'db'; // 'console' 'file'
 
+// const now = moment();
+const twoMinsFromStart = moment().add(20, 'minutes');
+// const tenSecsFromStart = moment().add(10, 'seconds');
+
+console.time('resume');
 if (mode === 'resumeSolutionsDB') {
     (async () => {
         // await resumeSolutionsDB();
@@ -20,9 +26,26 @@ if (mode === 'resumeSolutionsDB') {
         // await resumeSolutionsDB();
         // await resumeSolutionsDB();
         // await resumeSolutionsDB(closeDb);
-        await decideAndSave();
-        await decideAndSave();
-        await decideAndSave(closeDb);
+        // ----
+        async function partial(cb) {
+            console.log('partial call two', twoMinsFromStart, moment(), moment().isAfter(twoMinsFromStart));
+            if (moment().isAfter(twoMinsFromStart)) {
+                console.log('partial call four');
+                await decideAndSave(cb);
+                console.timeLog('resume');
+                return;
+            } else {
+                console.log('partial call three');
+                await decideAndSave();
+                console.timeLog('resume');
+                await partial(cb);
+            }
+        }
+        console.timeLog('resume');
+        console.log('partial call one');
+        await partial(closeDb);
+        console.timeEnd('resume');
+        // await decideAndSave(closeDb);
         // await saveAllStepsBoards();
         // await findSymmetricBoards();
         // await closeDb();
