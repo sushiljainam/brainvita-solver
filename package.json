@@ -16,6 +16,7 @@
     "flip-array": "^0.1.0",
     "moment": "^2.29.4",
     "mongodb": "^4.9.0",
+    "prompt-sync": "^4.2.0",
     "ramda": "^0.28.0"
   }
 }
