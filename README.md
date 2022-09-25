@@ -31,3 +31,9 @@ To learn multiple levels of optimization to achieve this in optimum time and CPU
 * All possibles moves are found and applied on previous boards.
 * All possible move paths picked are saved in database.
 
+## How can I contribute?
+
+* You can think more optimization possibilities and implement them, raise PRs.
+* You can improve code coverage to make code more reliable.
+* Eventually, we want to make it able to run on multiple nodes and share/save results/progress at one place. - you can think of that and plan.
+
