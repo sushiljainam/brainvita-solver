@@ -37,3 +37,27 @@ To learn multiple levels of optimization to achieve this in optimum time and CPU
 * You can improve code coverage to make code more reliable.
 * Eventually, we want to make it able to run on multiple nodes and share/save results/progress at one place. - you can think of that and plan.
 
+## PROGRESS so far and definition of DONE
+
+```txt
+┌─────────┬────────┬───────────┬────────┬────────────┬─────────┬───────┬─────────┐
+│ (index) │ blanks │  status   │ total  │ uniqBoards │ similar │ doing │ pending │
+├─────────┼────────┼───────────┼────────┼────────────┼─────────┼───────┼─────────┤
+│    0    │   1    │  'DONE'   │   1    │     1      │    0    │   0   │    0    │
+│    1    │   2    │  'DONE'   │   4    │     1      │    3    │   0   │    0    │
+│    2    │   3    │  'DONE'   │   3    │     2      │    1    │   0   │    0    │
+│    3    │   4    │  'DONE'   │   10   │     8      │    2    │   0   │    0    │
+│    4    │   5    │  'DONE'   │   51   │     39     │   12    │   0   │    0    │
+│    5    │   6    │  'DONE'   │  294   │    171     │   123   │   0   │    0    │
+│    6    │   7    │  'DONE'   │  1453  │    719     │   734   │   0   │    0    │
+│    7    │   8    │  'DONE'   │  6606  │    2757    │  3849   │   0   │    0    │
+│    8    │   9    │  'DONE'   │ 26912  │    9751    │  17161  │   0   │    0    │
+│    9    │   10   │  'DONE'   │ 99280  │   31312    │  67968  │   0   │    0    │
+│   10    │   11   │ 'RUNNING' │ 325332 │    3937    │  5096   │   0   │ 316299  │
+└─────────┴────────┴───────────┴────────┴────────────┴─────────┴───────┴─────────┘
+```
+
+This table shows that I have executed this code so much that all possible combinations of boards till 10 marbles are discarded are found and saved. And to find for 11 marbles discarded execution is going on.
+
+This task can be considered finished when this table has 31 rows till blanks:31 and for each row pending, and doing are zero (0).
+
