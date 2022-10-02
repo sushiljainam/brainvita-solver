@@ -9,6 +9,7 @@
     "start": "node .",
     "start-save": "node . > output.txt",
     "test": "node test",
+    "rp":"node cli/report.js",
     "otest": "node test 2> test-errors.txt 1> test-success.txt"
   },
   "dependencies": {
