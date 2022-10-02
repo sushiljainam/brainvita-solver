@@ -61,5 +61,6 @@ This table shows that I have executed this code so much that all possible combin
 
 For '11 marbles discarded' there are total `325332` boards, but many of them are duplicate/symmetric, so we need to find unique boards (matrices) among them, and that's a CPU heavy task.
 
-### definition of DONE (DOD): This project can be considered finished when this table has 31 rows till `blanks:31` and for each row 'pending', and 'doing' are having value as zero (0).
+### definition of DONE (DOD):
+This project can be considered finished when this table has 31 rows till `blanks:31` and for each row 'pending', and 'doing' are having value as zero (0).
 
