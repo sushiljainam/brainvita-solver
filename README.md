@@ -57,7 +57,9 @@ To learn multiple levels of optimization to achieve this in optimum time and CPU
 └─────────┴────────┴───────────┴────────┴────────────┴─────────┴───────┴─────────┘
 ```
 
-This table shows that I have executed this code so much that all possible combinations of boards till 10 marbles are discarded are found and saved. And to find for 11 marbles discarded execution is going on.
+This table shows that I have executed this code so much that all possible combinations of boards till '10 marbles are discarded' are found and saved. And to find for '11 marbles discarded' execution is going on.
 
-This task can be considered finished when this table has 31 rows till blanks:31 and for each row pending, and doing are zero (0).
+For '11 marbles discarded' there are total `325332` boards, but many of them are duplicate/symmetric, so we need to find unique boards (matrices) among them, and that's a CPU heavy task.
+
+### definition of DONE (DOD): This project can be considered finished when this table has 31 rows till `blanks:31` and for each row 'pending', and 'doing' are having value as zero (0).
 
