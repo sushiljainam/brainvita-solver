@@ -4,6 +4,7 @@ const { printBoard, boardStringToBoard } = require("../lib/common");
 function stringToContinue() {
     const st = prompt("Paste the boardString :- ");
     if (st.length === 49) {
+        console.clear();
         printBoard(boardStringToBoard(st));
         stringToContinue();
     } else {
